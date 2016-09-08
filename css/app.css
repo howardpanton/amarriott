@@ -1,0 +1,584 @@
+html, body {
+	background-color: #000;
+}
+
+p {
+    font-family: lato;
+    font-weight: 300;
+}
+
+.load-hidden {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#bgvid, #slider, #mobile-slider, .dark-layer {
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-55%);
+    -moz-transform: translateX(-50%) translateY(-55%);
+    -webkit-transform: translateX(-50%) translateY(-55%);
+    transform: translateX(-50%) translateY(-50%);
+	background-size: cover;
+}
+
+#slider.image1, #mobile-slider.image1 {
+	background-image: url('../images/1.jpg');
+}
+
+#slider.image2, #mobile-slider.image2 {
+	background-image: url('../images/2.jpg');
+}
+
+#slider.image3, #mobile-slider.image3 {
+	background-image: url('../images/3.jpg');
+}
+
+#slider.image4, #mobile-slider.image4 {
+	background-image: url('../images/4.jpg');
+}
+
+#slider.image5, #mobile-slider.image5 {
+	background-image: url('../images/5.jpg');
+}
+
+.dark-layer {
+	background: #000;
+	opacity: 0.5;
+	z-index: -95;
+}
+
+.light-layer {
+	background: #000000;
+	opacity: 0.9;
+	position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+}
+
+.white-menu {
+    background: rgba(226,227,228,0.9);
+	position: fixed;
+	top: 0%;
+	height: 100%;
+	z-index: 0;
+}
+
+.front {
+	position: fixed;
+	z-index: 50;
+	width: 48%;
+	display: block;
+}
+
+.back {
+	position: fixed;
+	z-index: -50;
+}
+
+#home:not(:target),
+#home:not(:target) *,
+#gallery:not(:target),
+#gallery:not(:target) *,
+#prehome:not(:target),
+#prehome:not(:target) *,
+#biography:not(:target),
+#biography:not(:target) *,
+#galleries:not(:target),
+#galleries:not(:target) * ,
+#gallery-connectome:not(:target),
+#gallery-connectome:not(:target) *,
+#gallery-tanglewood:not(:target),
+#gallery-tanglewood:not(:target) *,
+#gallery-trespass:not(:target),
+#gallery-trespass:not(:target) *,
+#gallery-flame:not(:target),
+#gallery-flame:not(:target) *,
+#gallery-sensorium:not(:target),
+#gallery-sensorium:not(:target) *,
+#gallery-children-of-adam:not(:target),
+#gallery-children-of-adam:not(:target) *,
+#gallery-backstage-gala:not(:target),
+#gallery-backstage-gala:not(:target) *,
+#gallery-portrait-of-a-dancer:not(:target),
+#gallery-portrait-of-a-dancer:not(:target) * {
+	display: none;
+}
+
+#home:target, .target-fix {
+	left: 0%;
+	width: 50%;
+	animation-duration: 2s;
+	animation-name: slidein;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+#home:target *, .target-fix * {
+	animation-duration: 3s;
+	animation-name: fadeIn;
+}
+
+#biography:target {
+	left: 0%;
+	width: 50%;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+#biography:target * {
+	animation-duration: 2s;
+	animation-name: fadeIn;
+}
+
+#biography video {
+	width: 100%;
+    margin-top: 18%;
+}
+
+#biography .full {
+    clear: left;
+    overflow: overlay;
+    height: 85%;
+    width: 98% !important;
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+    padding-right: 0;
+    z-index: -20;
+}
+
+#biography::-webkit-scrollbar { width: 0 !important }
+
+#galleries:target {
+	left: 0%;
+	width: 50%;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+#imagesContent .menuText {
+	margin-top: 24%;
+}
+
+#galleries .GalleriesImg {
+	width: 50%;
+    margin-right: 2%;
+}
+
+.links {
+	width: 43%;
+    position: relative;
+    float: right;
+}
+
+.logos {
+    width: 60%;
+    margin: 30px auto;
+}
+
+.logos img {
+	width: 100%
+}
+
+#galleries:target * {
+	animation-duration: 2s;
+	animation-name: fadeIn;
+}
+
+#gallery:target,
+#gallery-flame:target,
+#gallery-trespass:target,
+#gallery-tanglewood:target,
+#gallery-connectome:target,
+#gallery-sensorium:target,
+#gallery-children-of-adam:target,
+#gallery-backstage-gala:target,
+#gallery-portrait-of-a-dancer:target {
+	left: 0%;
+	width: 100%;
+	animation-duration: 3s;
+	animation-name: expand;
+}
+
+#gallery:target *,
+#gallery-flame:target *,
+#gallery-trespass:target *,
+#gallery-tanglewood:target *,
+#gallery-connectome:target *,
+#gallery-sensorium:target *,
+#gallery-children-of-adam:target *,
+#gallery-backstage-gala:target *,
+#gallery-portrait-of-a-dancer:target * {
+	animation-duration: 3s;
+	animation-name: fadeIn;
+}
+
+#prehome:target {
+	opacity: 0;
+	animation-duration: 5s;
+	animation-name: slideout;
+}
+
+@keyframes slidein {
+  from {
+      -ms-transform: translateX(-100%) translateY(0%);
+	  -moz-transform: translateX(-100%) translateY(0%);
+	  -webkit-transform: translateX(-100%) translateY(0%);
+	  transform: translateX(-100%) translateY(0%);
+  }
+  to {
+	  -ms-transform: translateX(0%) translateY(0%);
+	  -moz-transform: translateX(0%) translateY(0%);
+	  -webkit-transform: translateX(0%) translateY(0%);
+	  transform: translateX(0%) translateY(0%);
+  }
+}
+
+@keyframes expand {
+  from {
+	width: 50%;
+  }
+  to {
+	width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+	opacity: 0;
+  }
+  to {
+	opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+	opacity: 1;
+  }
+  to {
+	opacity: 0;
+  }
+}
+
+.logo {
+    margin-left: 15px;
+    margin-top: 15px;
+    position: absolute;
+}
+
+.logo img {
+	width: 100%;
+    max-width: 250px;
+}
+
+.logo a, .logo a:hover, .logo a:active, .logo a:visited {
+	color: #ffffff;
+    font-family: Muli;
+    text-decoration: none;
+    animation-duration: 2s;
+    animation-name: fadeIn;
+}
+
+.menu-link {
+	position: fixed;
+    bottom: 13px;
+    left: 15px;
+    color: #BBB3B3;
+    cursor: pointer;
+    border-bottom: solid;
+    letter-spacing: 0.1vw;
+    font-size: 1.5vw !important;
+    animation-duration: 2s;
+    animation-name: fadeIn;
+}
+
+.contact-link {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    color: #ffffff;
+    font-size: 1vw !important;
+    line-height: 1.2vw;
+    z-index: -91;
+    animation-duration: 2s;
+    animation-name: fadeIn;
+}
+
+a, a:hover, a:active, a:visited {
+	color: #333;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.menu-link a, .menu-link a:hover, .menu-link a:active, .menu-link a:visited,
+.contact-link a, .contact-link a:hover, .contact-link a:active, .contact-link a:visited {
+	color: #BEBFC1;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 2rem;
+    letter-spacing: 0.1vw;
+}
+
+.menu-button {
+    color: #BBB3B3;
+    cursor: pointer;
+    border-bottom: solid;
+    font-size: 1.5rem !important;
+}
+
+.white-menu .menu-image {
+	float: left;
+	clear: left;
+	width: 100%;
+    padding-bottom: 1vw;
+}
+
+.white-menu .menu-links {
+	margin-top: 20%;
+	width: 20%;
+	height: 85%;
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    font-family: lato;
+    font-weight: 300;
+}
+
+.menu-links p{
+    border-top: 2px solid #5a5959;
+    padding-top: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 7px;
+}
+
+.menu-links a:hover {
+    background-color: white;
+}
+
+.white-menu .gallery-links {
+    clear: left;
+    overflow: overlay;
+    height: 85%;
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+    padding-right: 0;
+}
+
+.white-menu .menu-text {
+    clear: left;
+    overflow: overlay;
+    height: 85%;
+    width: 100%;
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+    padding-right: 24%;
+    z-index: -20;
+}
+
+.white-menu .menu-text p {
+    padding: 1rem 0rem 0rem;
+    line-height: 1.6em;
+    font-family: 'lato';
+    font-weight: 300;
+    width: 80%;
+    margin: auto;
+}
+
+.white-menu .menu-text .leader {
+	font-size: 1.5em;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+}
+
+.white-menu .back-link {
+	position: fixed;
+    bottom: 35px;
+    left: 50.3%;
+}
+
+.white-menu .connect-link {
+	position: fixed;
+    bottom: 5px;
+    left: 50%;
+}
+
+.back-arrow {
+	background-image: url('../images/assets/arrow-white.png');
+    background-size: cover;
+    width: 2em;
+    height: 2em;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.linkedin-icon {
+	background-image: url('../images/assets/linkedin.png');
+	background-size: cover;
+	width: 32px;
+	height: 26px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.gallery a, .gallery a:visited, .gallery a:hover, .gallery a:active {
+	text-decoration: none;
+}
+
+.gallery .contact {
+	position: fixed;
+	right: 1%;
+	top: 10.8%;
+	height: 75%;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.gallery .back {
+    position: fixed;
+    right: 15.8%;
+    top: 10.2%;
+}
+
+.gallery .back a {
+	background-image: url('../images/assets/arrow-black.png');
+    background-size: cover;
+    width: 2em;
+    height: 2em;
+	cursor: pointer;
+	display: block;
+}
+
+.gallery .gallery-info {
+	background-color: rgba(0,0,0,0.93);
+	color: #BDBDBD;
+	position: fixed;
+	right: 0%;
+	top: 13%;
+	height: 87%;
+	width: 18%;
+	padding: 1em;
+	z-index: 50;
+}
+
+.gallery .gallery-info .gallery-title h4 {
+    margin: 0 auto 1em auto;
+    border-bottom: 1px solid #BDBDBD;
+    padding-bottom: 3px;
+    width: 100%;
+    clear: right;
+    float: right;
+    font-size: 3vh;
+}
+
+.gallery .full-images {
+	width: 100%;
+	height: 80%;
+	white-space: nowrap;
+	overflow-x: scroll;
+	position: absolute;
+    bottom: 3.5%;
+}
+
+.gallery .full-images .image {
+    height: 99%;
+    margin: 0 1px;
+}
+
+.gallery .full-images .image:last-child {
+	margin-right: 18%;
+}
+
+.gallery .full-images video {
+	display: block;
+	height: 99%;
+}
+
+.gallery .thumbnails {
+	width: 100%;
+	height: 4%;
+	white-space: nowrap;
+	position: absolute;
+    bottom: 0;
+}
+
+.gallery .thumbnails .image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+	display: inline-block;
+    margin-right: 0.05em;
+	cursor: pointer;
+}
+
+#fullscreen-image-container, #fullscreen-image-container .full-image {
+	position: fixed;
+	top: 0%;
+	left: 0%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+	display: inline-block;
+	cursor: url('../images/assets/shrink.png'), auto;
+	z-index: 60;
+}
+
+#fullscreen-image-container .full-image {
+	top: 1%;
+	height: 98%;
+}
+
+#fullscreen-image-container .close-icon {
+	background-image: url('../images/assets/shrink.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 5%;
+    height: 5%;
+    position: fixed;
+    top: 2%;
+    right: 0%;
+    z-index: 100;
+}
+
+#mobile {
+	display: none;
+}
+
+@media (max-width: 800px) {
+  body * {
+    display: none;
+  }
+
+  #mobile {
+  	display: block;
+  }
+
+  .mobile-info {
+  	
+  }
+}
+
+:target { outline: solid red }  /* draw a red, solid line around the target element */

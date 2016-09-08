@@ -1,0 +1,145 @@
+ .white-menu {
+      background: rgba(226,227,228,0.9);
+      position: fixed;
+      top: 0%;
+      height: 100%;
+      z-index: 0;
+      left: 0%;
+      width: 50%;
+      padding-left: 1%;
+      padding-right: 1%;
+    }
+    .white-menu .menu-image {
+      float: left;
+      clear: left;
+      width: 100%;
+      padding-bottom: 1vw;
+    }
+    
+    .white-menu .menu-links {
+      margin-top: 20%;
+      width: 20%;
+      height: 85%;
+      position: absolute;
+      bottom: 1%;
+      right: 1%;
+      font-family: lato;
+      font-weight: 300;
+    }
+
+    .white-menu .gallery-links {
+      clear: left;
+      overflow: overlay;
+      height: 85%;
+      position: absolute;
+      bottom: 1%;
+      left: 1%;
+      padding-right: 0;
+    }
+    
+    .white-menu .menu-text, .white-menu .menu-text-about  {
+      clear: left;
+      height: 85%;
+      width: 75%;
+      position: absolute;
+      bottom: 1%;
+      left: 1%;
+      padding-right: 24%;
+      z-index: -20;
+      overflow-y: scroll;
+       text-align: justify;
+    }
+    
+    .white-menu .menu-text p, .white-menu .menu-text-about p {
+      padding: 1rem 0rem 0rem;
+      line-height: 1.6em;
+      font-family: 'lato';
+      font-weight: 300;
+      width: 80%;
+      margin: auto;
+    }
+    
+    .white-menu .menu-text .leader, .white-menu .menu-text-about .leader {
+      font-size: 1.5em;
+      width: 80%;
+      text-align: center;
+      margin: auto;
+      border-top: 2px solid;
+      border-bottom: 2px solid;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
+    }
+    
+    .white-menu .back-link {
+      position: fixed;
+      bottom: 35px;
+      left: 50.3%;
+    }
+    
+    .white-menu .connect-link {
+      position: fixed;
+      bottom: 5px;
+      left: 50%;
+    }
+
+    .white-menu.hidden {
+          display: none;
+    }
+
+    .menu-links p {
+  border-top: 2px solid rgb(90, 89, 89);
+  padding-top: 7px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-bottom: 7px;
+}
+
+p {
+  font-family: lato;
+  font-weight: 300;
+}
+
+a, a:hover, a:active, a:visited {
+  color: rgb(51, 51, 51);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+  .hidden {
+    display: none;
+  }
+
+  .justify {
+  text-align: justify;
+}
+
+.white-menu .menu-text.full {
+  clear: left;
+  overflow: overlay;
+  height: 85%;
+  width: 98% !important;
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+  padding-right: 0;
+  z-index: -20;
+  text-align: justify;
+}
+
+.white-menu .menu-text.gallery {
+  left: 0%;
+  width: 50%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.gallery .links {
+  width: 43%;
+  position: relative;
+  float: right;
+  }
+
+#gallery{
+  width: 100%;
+  left: 0%;
+}

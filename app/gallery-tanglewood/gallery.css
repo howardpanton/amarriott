@@ -1,0 +1,85 @@
+   a, a:hover, a:active, a:visited {
+  color: rgb(51, 51, 51);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contact {
+  position: fixed;
+  right: 1%;
+  top: 9%;
+  height: 75%;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.gallery-info {
+  background-color: rgba(0,0,0,0.93);
+  color: rgb(189, 189, 189);
+  position: fixed;
+  right: 0%;
+  top: 13%;
+  height: 87%;
+  width: 18%;
+  padding: 1em;
+  z-index: 50;
+}
+
+.gallery-info .gallery-title h4 {
+  margin: 0 auto 1em auto;
+  border-bottom: 1px solid rgb(189, 189, 189);
+  padding-bottom: 3px;
+  width: 100%;
+  clear: right;
+  float: right;
+  font-size: 3vh;
+}
+.full-image {
+  width: 78%;
+  height: 80%;
+  white-space: nowrap;
+  overflow-x: scroll;
+  position: absolute;
+  bottom: 3.5%;
+}
+
+.full-image .image {
+  height: 99%;
+  margin: 0 1px;
+}
+
+.full-image .image {
+  height: 99%;
+  margin: 0 1px;
+}
+    .white-menu {
+      background: rgba(226,227,228,0.9);
+      position: fixed;
+      top: 0%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .white-menu {
+    left: 0%;
+      width: 100%;
+      animation-duration: 3s;
+      animation-name: expand;
+      }
+      .gallery .back {
+  position: fixed;
+  right: 15.8%;
+  top: 8.8%;
+}
+
+.gallery .back a {
+  background-image: url('../images/assets/arrow-black.png');
+  background-size: cover;
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  display: block;
+}
+.gallery a, .gallery a:visited, .gallery a:hover, .gallery a:active {
+  text-decoration: none;
+}

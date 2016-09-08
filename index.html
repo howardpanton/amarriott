@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Alastair</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Arimo|Assistant|Open+Sans|Muli|Lato:400,300,700,900,300italic,400italic,700italic,900italic,100italic,100" rel="stylesheet">
+  <style>
+  html {
+    font-size: 10px;
+    line-height: 1.42857143;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+  body {
+    margin: 0;
+    background: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+    font-family: "Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Hiragino Kaku Gothic Pro",Meiryo,"Malgun Gothic",sans-serif;
+    font-size: 1.4rem;
+    overflow-x: hidden;
+  }
+  html, body {
+	background-color: #000;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+
+p {
+    font-family: lato;
+    font-weight: 300;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+.textjustify {
+  text-align: justify;
+}
+
+a, a:hover, a:active, a:visited {
+  color: rgb(51, 51, 51);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h4 {
+  font-size: 2.4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+
+  </style>
+</head>
+<body>
+  <app-root>Loading...</app-root>
+  
+    <script src="vendor/es6-shim/es6-shim.js"></script>
+    <script src="vendor/reflect-metadata/Reflect.js"></script>
+    <script src="vendor/systemjs/dist/system.src.js"></script>
+    <script src="vendor/zone.js/dist/zone.js"></script>
+    <script>
+      System.import('system-config.js').then(function () {
+        System.import('main');
+      }).catch(console.error.bind(console));
+    </script>
+  
+</body>
+</html>
